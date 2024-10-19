@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+      svg {
+        border: 1px solid black;
+        display: block;
+      }
+    </style>
+  </head>
+  <h1>About the SVG element</h1>
+  <div>
+    The svg element width and height defines the size in relation to the HTML
+    page.
+  </div>
+  <div>
+    The viewbox defines the size of the element in relation to its children.
+  </div>
+  <div>
+    <label for="100x100">A 100 x 100 SVG with a 200x200 viewbox</label>
+    <svg id="100x100" width="100" height="100" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="50" fill="red" />
+    </svg>
+  </div>
+  <div>
+    <label for="200x200">A 200 x 200 SVG with a 200x200 viewbox</label>
+    <svg id="200x200" width="200" height="200" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="50" fill="blue" />
+    </svg>
+  </div>
+  <div>
+    <label for="offset">A 200 x 200 SVG with a 100x100 viewbox</label>
+    <svg id="offset" width="200" height="200" viewBox="0 0 100 100">
+      <circle cx="100" cy="100" r="50" fill="green" />
+    </svg>
+  </div>
+  <div>
+    <label for="negativeOrigin">A 200x200 SVG with a 200x200 viewbox, starting at -100,100</label>
+    <svg id="negativeOrigin" width="200" height="200" viewBox="-100 -100 200 200">
+      <circle cx="0" cy="0" r="50" fill="orange" />
+  </div>
+</html>
