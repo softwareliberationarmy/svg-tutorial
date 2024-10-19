@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+      svg {
+        border: 1px solid black;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>O Christmas Tree (with polygons)</h1>
+    <svg width="200" height="400" viewBox="-100 -200 200 400">
+      <!-- polygons have points that are connected using straight lines -->
+      <!-- child elements are painted in order, so while these are triangles, they overlap in a particular order -->
+      <!-- bottom tier -->
+      <polygon points="0,0 80,120 -80,120" fill="#234236" />
+      <!-- middle tier -->
+      <polygon points="0,-40 60,60 -60,60" fill="#0C5C4C" />
+      <!-- top tier -->
+      <polygon points="0,-80 40,0 -40,0" fill="#38755B" />
+      <!-- trunk -->
+      <rect x="-20" y="120" width="40" height="30" fill="brown" />
+      <!-- let's try a 5-pointed star on the top -->
+      <polygon points="0,-102 18,-53 -25,-85 25,-85, -18,-53" fill="gold" />
+
+      <!-- TODO: let's add some ornaments -->
+    </svg>
+  </body>
+</html>
