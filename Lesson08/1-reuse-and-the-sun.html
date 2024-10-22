@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <style>
+      svg {
+        border: 1px solid black;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <p>The sun - starting with one ray</p>
+    <svg width="200" height="200" viewBox="-15 -15 30 30">
+      <circle r="6" fill="orange" />
+      <line
+        stroke="orange"
+        stroke-width="2"
+        stroke-linecap="round"
+        y1="11"
+        y2="14"
+      />
+    </svg>
+    <p>The sun - reusing the first ray to create more rays</p>
+    <svg width="200" height="200" viewBox="-15 -15 30 30">
+      <circle r="6" fill="orange" />
+      <line
+        id="ray"
+        stroke="orange"
+        stroke-width="2"
+        stroke-linecap="round"
+        y1="11"
+        y2="14"
+      />
+
+      <use href="#ray" transform="rotate(45)" />
+      <use href="#ray" transform="rotate(90)" />
+      <use href="#ray" transform="rotate(135)" />
+      <use href="#ray" transform="rotate(180)" />
+      <use href="#ray" transform="rotate(225)" />
+      <use href="#ray" transform="rotate(270)" />
+      <use href="#ray" transform="rotate(315)" />
+    </svg>
+  </body>
+</html>
