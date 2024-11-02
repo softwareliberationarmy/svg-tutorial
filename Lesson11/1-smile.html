@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <style>
+      svg {
+        border: 1px solid black;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      setInterval(() => {
+        window.location.reload();
+      }, 10000);
+    </script>
+    <div>
+      <p>A smile using a quadratic Bezier curve.</p>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <circle
+          cx="0"
+          cy="0"
+          r="90"
+          fill="none"
+          stroke="black"
+          stroke-width="10"
+        />
+        <ellipse cx="-25" cy="-25" rx="10" ry="15" />
+        <ellipse cx="25" cy="-25" rx="10" ry="15" />
+        <path
+          d="M -40,30 Q 0,60 40,30"
+          fill="none"
+          stroke="black"
+          stroke-width="10"
+          stroke-linecap="round"
+        />
+      </svg>
+      <p>A shark's fin</p>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path
+          d="M -60,50 Q 40,-50 40,50"
+          fill="none"
+          stroke="blue"
+          stroke-width="10"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
