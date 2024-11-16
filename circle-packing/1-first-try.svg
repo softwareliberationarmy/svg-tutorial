@@ -1,0 +1,9 @@
+<svg width="200" height="200" style="background:blanchedalmond;" viewBox="-100 -100 200 200"
+    xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <circle cx="0" cy="0" r="10" stroke-width="0" fill="pink" />
+        <text style="fill:black" font-size="6" alignment-baseline="middle" text-anchor="middle">Program.cs</text>
+        <circle cx="0" cy="25" r="15" fill="green" />
+        <text y="25" style="fill:black" font-size="6" alignment-baseline="middle" text-anchor="middle">App.cs</text>
+    </g>
+</svg>
