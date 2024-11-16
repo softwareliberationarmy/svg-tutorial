@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <style>
+      svg {
+        border: 1px solid black;
+        display: block;
+      }
+    </style>
+    <script>
+      setInterval(() => window.location.reload(), 5000);
+    </script>
+  </head>
+  <body>
+    <div>
+      <p>Some arc practice</p>
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path
+          stroke="green"
+          fill="none"
+          stroke-width="5"
+          d="
+                M -40 -40
+                A 70 70 0 0 0 40 40"
+        />
+      </svg>
+      <p>A circle arc, sweeping counter-clockwise</p>
+
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path
+          stroke="green"
+          fill="none"
+          stroke-width="5"
+          d="
+                M -40 -40
+                A 70 70 0 0 1 40 40"
+        />
+      </svg>
+      <p>A circle arc, sweeping clockwise</p>
+
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path
+          stroke="green"
+          fill="none"
+          stroke-width="5"
+          d="
+                M -40 -40
+                A 70 70 0 1 1 40 40"
+        />
+      </svg>
+      <p>A circle arc, sweeping clockwise the large-arc way</p>
+
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path
+          stroke="green"
+          fill="none"
+          stroke-width="5"
+          d="
+                M -40 -40
+                A 70 70 0 1 0 40 40"
+        />
+      </svg>
+      <p>A circle arc, sweeping counter-clockwise the large-arc way</p>
+
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path
+          stroke="red"
+          fill="none"
+          stroke-width="5"
+          d="
+                M -40 -40
+                A 70 40 0 1 1 40 40"
+        />
+      </svg>
+      <p>An elliptical arc, sweeping clockwise the long way</p>
+
+      <svg width="200" height="200" viewBox="-100 -100 200 200">
+        <path
+          stroke="red"
+          fill="none"
+          stroke-width="5"
+          d="
+                M -40 -40
+                A 70 40 30 1 1 40 40"
+        />
+      </svg>
+      <p>An elliptical arc, rotated 30&deg;</p>
+
+      <svg width="200" height="200" viewBox="0 0 30 30">
+        <path
+          d="
+        M 23, 5
+        A 12 12 0 1 0 23 25
+        A 12 12 0 0 1 23 5"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
