@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      svg {
+        display: block;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      setInterval(() => {
+        window.location.reload();
+      }, 5000);
+    </script>
+  </head>
+  <body>
+    <h1>Symmetric xmas tree, made with polygons and rectangles</h1>
+    <svg width="200" height="400" viewBox="-100 -200 200 400">
+      <polygon fill="#234236" points="0,0 80,120 -80,120" />
+      <polygon fill="#0C5C4C" points="0,-40 60,60 -60,60" />
+      <polygon fill="#38755B" points="0,-80 40,0 -40,0" />
+      <!-- trunk -->
+      <rect x="-20" y="120" width="40" height="30" fill="brown" />
+    </svg>
+  </body>
+</html>

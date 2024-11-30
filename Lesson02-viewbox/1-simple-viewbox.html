@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      svg {
+        display: block;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      setInterval(() => {
+        window.location.reload();
+      }, 5000);
+    </script>
+  </head>
+  <body>
+    <h1>Unshifted origin</h1>
+    <svg width="200" height="200">
+      <rect x="10" y="10" width="20" height="20" fill="brown" />
+    </svg>
+    <h1>Now let's add a viewbox to shift the origin</h1>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <rect x="10" y="10" width="20" height="20" fill="brown" />
+    </svg>
+    <h1>Smaller viewbox means images appear larger</h1>
+    <svg height="200" width="200" viewBox="0 0 100 100">
+      <rect x="10" y="10" width="20" height="20" fill="brown" />
+    </svg>
+  </body>
+</html>
