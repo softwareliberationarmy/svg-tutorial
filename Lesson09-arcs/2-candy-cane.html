@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      svg {
+        display: block;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      setInterval(() => {
+        window.location.reload();
+      }, 5000);
+    </script>
+  </head>
+  <body>
+    <h1>Candy cane in three layers</h1>
+    <svg width="200" height="400" viewBox="-100 -200 200 400">
+      <path fill="none" stroke="black" stroke-width="45" stroke-linecap="round"
+      d="
+      M 50 120
+      L 50 -80
+      A 50 50 0 0 0 -50 -80" />
+      <path fill="none" stroke="red" stroke-width="35" stroke-linecap="round"
+      d="
+      M 50 120
+      L 50 -80
+      A 50 50 0 0 0 -50 -80" />
+      <path fill="none" stroke="white" stroke-dasharray="30 30" stroke-width="35"
+      d="
+      M 50 120
+      L 50 -80
+      A 50 50 0 0 0 -50 -80" />
+    </svg>      
+  </body>
+</html>

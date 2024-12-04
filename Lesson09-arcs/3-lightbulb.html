@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      svg {
+        display: block;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      setInterval(() => {
+        window.location.reload();
+      }, 5000);
+    </script>
+  </head>
+  <body>
+    <h1>Lightbulb</h1>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        fill="gold"
+        stroke="black"
+        stroke-width="10"
+        stroke-linejoin="round"
+        d="M -30 20
+      A 50 50 0 1 1 30 20
+      Q 20 30 20 50
+      L -20 50
+      Q -20 30 -30 20"
+      />
+      <path
+        fill="none"
+        stroke="black"
+        stroke-width="10"
+        stroke-linecap="round"
+        d="M -30 -20
+      A 30 30 0 0 1 0 -50"
+      />
+      <path
+        stroke="black"
+        stroke-width="10"
+        stroke-linecap="round"
+        d="
+      M -18 62
+      L 18 62
+      M -15 75
+      L 15 75"
+      />
+    </svg>
+  </body>
+</html>

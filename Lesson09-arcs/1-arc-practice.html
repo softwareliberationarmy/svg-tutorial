@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      svg {
+        display: block;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      setInterval(() => {
+        window.location.reload();
+      }, 5000);
+    </script>
+  </head>
+  <body>
+    <h1>A rx ry rotation large-arc-flag sweep-flag endX endY</h1>
+    <p>
+      Circle with equal rx and ry values, small arc, sweep counter-clockwise (A
+      70 70 0 0 0 40 40)
+    </p>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        fill="none"
+        stroke="red"
+        stroke-width="5"
+        d=" 
+      M -40 -40 
+      A 70 70 0 0 0 40 40"
+      />
+    </svg>
+    <p>
+      Circle with equal rx and ry values, small arc, sweep clockwise (A 70 70 0
+      0 1 40 40)
+    </p>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        fill="none"
+        stroke="red"
+        stroke-width="5"
+        d=" 
+      M -40 -40 
+      A 70 70 0 0 1 40 40"
+      />
+    </svg>
+    <p>
+      Circle with equal rx and ry values, large arc, sweep clockwise (A 70 70 0
+      1 1 40 40)
+    </p>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        fill="none"
+        stroke="red"
+        stroke-width="5"
+        d=" 
+      M -40 -40 
+      A 70 70 0 1 1 40 40"
+      />
+    </svg>
+    <p>
+      Circle with equal rx and ry values, large arc, sweep counter-clockwise (A
+      70 70 0 1 0 40 40)
+    </p>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        fill="none"
+        stroke="red"
+        stroke-width="5"
+        d=" 
+      M -40 -40 
+      A 70 70 0 1 0 40 40"
+      />
+    </svg>
+    <p>
+      Ellipsis, large arc, sweep clockwise (A
+      70 70 0 0 0 40 40)
+    </p>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        fill="none"
+        stroke="green"
+        stroke-width="5"
+        d=" 
+      M -40 -40 
+      A 70 40 0 1 1 40 40"
+      />
+    </svg>
+    <p>
+      Ellipsis rotated 30&deg;, large arc, sweep clockwise (A
+      70 70 0 0 0 40 40)
+    </p>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        fill="none"
+        stroke="green"
+        stroke-width="5"
+        d=" 
+      M -40 -40 
+      A 70 40 30 1 1 40 40"
+      />
+    </svg>
+    <p>Moon icon</p>
+    <svg width="200" height="200" viewBox="0 0 30 30">
+      <path d="
+      M 23,5
+      A 12 12 0 1 0 23 25
+      A 12 12 0 0 1 23 5" />
+    </svg>
+  </body>
+</html>
