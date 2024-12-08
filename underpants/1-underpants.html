@@ -16,6 +16,18 @@
   <body>
     <h1>Underpants</h1>
     <svg width="400" height="400" viewBox="-100 -100 200 200">
+      <defs>
+        <path
+          id="heart"
+          stroke="red"
+          stroke-width="10"
+          stroke-linecap="round"
+          d="
+        M -80 -60
+        L -75 -55
+        L -70 -60"
+        />
+      </defs>
       <path
         fill="#bcbce2"
         stroke="black"
@@ -70,66 +82,12 @@
           L 40 29
           A 65 65 0 0 1 77 16"
       />
-      <path
-        stroke="red"
-        stroke-width="10"
-        stroke-linecap="round"
-        transform="translate(20,20)"
-        d="
-        M -80 -60
-        L -75 -55
-        L -70 -60"
-      />
-      <path
-        stroke="red"
-        stroke-width="10"
-        stroke-linecap="round"
-        transform="translate(7,39)"
-        d="
-        M -80 -60
-        L -75 -55
-        L -70 -60"
-      />
-      <path
-        stroke="red"
-        stroke-width="10"
-        stroke-linecap="round"
-        transform="translate(18,60)"
-        d="
-        M -80 -60
-        L -75 -55
-        L -70 -60"
-      />
-      <path
-        stroke="red"
-        stroke-width="10"
-        stroke-linecap="round"
-        transform="translate(127,18)"
-        d="
-        M -80 -60
-        L -75 -55
-        L -70 -60"
-      />
-      <path
-        stroke="red"
-        stroke-width="10"
-        stroke-linecap="round"
-        transform="translate(140,40)"
-        d="
-        M -80 -60
-        L -75 -55
-        L -70 -60"
-      />
-      <path
-        stroke="red"
-        stroke-width="10"
-        stroke-linecap="round"
-        transform="translate(127,60)"
-        d="
-        M -80 -60
-        L -75 -55
-        L -70 -60"
-      />
+      <use href="#heart" transform="translate(20,20)" />
+      <use href="#heart" transform="translate(7,39)" />
+      <use href="#heart" transform="translate(18,60)" />
+      <use href="#heart" transform="translate(127,18)" />
+      <use href="#heart" transform="translate(140,40)" />
+      <use href="#heart" transform="translate(127,60)" />
       <polygon fill="blue" points="-75 -60 75 -60 80 -40 -80 -40" />
     </svg>
   </body>
