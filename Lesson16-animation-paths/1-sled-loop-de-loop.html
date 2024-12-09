@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      svg {
+        display: block;
+        border: 1px solid black;
+      }
+      .sleigh {
+        offset-path: path(
+          "M -200 80 L -90 80 Q 60 80 60 -10 A 50 50 0 0 0 -60 -10 Q -60 80 90 80 L 200 80"
+        );
+        animation: roller-coaster 1500ms infinite linear;
+      }
+
+      @keyframes roller-coaster {
+        0% {
+          offset-distance: 0%;
+        }
+        100% {
+          offset-distance: 100%;
+        }
+      }
+    </style>
+    <script>
+      // setInterval(() => {
+      //   window.location.reload();
+      // }, 5000);
+    </script>
+  </head>
+  <body>
+    <h1>Sled loop-de-loop</h1>
+    <svg width="400" height="200" viewBox="-200 -100 400 200" fill="none">
+      <!-- track -->
+      <path
+        stroke="#e0ceb9"
+        stroke-width="4"
+        d="
+        M -200 80
+        L -80 80
+        Q 80 80 70 -10
+        A 70 70 0 0 0 -70 -10
+        Q -80 80 80 80
+        L 200 80"
+      />
+      <g class="sleigh">
+        <path
+          stroke="#af6455"
+          stroke-width="5"
+          d="
+          M -30 -2 L 30 -2 A 10 10 0 0 0 30 -22
+          M -20 -2 L -20 -17
+          M 20 -2 L 20 -17"
+        />
+        <path
+          stroke="#7a504f"
+          stroke-width="6"
+          d="
+          M -27 -17 L 27 -17"
+        />
+      </g>
+    </svg>
+  </body>
+</html>
