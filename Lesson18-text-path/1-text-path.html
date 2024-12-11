@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      svg {
+        display: block;
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      setInterval(() => {
+        window.location.reload();
+      }, 5000);
+    </script>
+  </head>
+  <body>
+    <h1>Text along a path</h1>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <defs>
+        <path id="text-arc" d="M 0, 50 A 50 50 0 1 1 1,50"  />
+      </defs>
+      <text font-family="Tacoma" font-size="0.77em" font-weight="bold" fill="#0c5c4c" >
+        <textPath href="#text-arc" startOffset="25%">
+          Happy Holidays! Happy Holidays! 
+        </textPath>
+      </text>
+    </svg>
+  </body>
+</html>
