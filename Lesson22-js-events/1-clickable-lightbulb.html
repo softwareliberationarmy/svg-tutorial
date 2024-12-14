@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      svg {
+        display: block;
+        border: 1px solid black;
+      }
+      #bulb {
+        cursor: pointer;
+      }
+    </style>
+    <!-- <script>
+      setInterval(() => {
+        window.location.reload();
+      }, 5000);
+    </script> -->
+  </head>
+  <body>
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        id="bulb"
+        fill="yellow"
+        stroke="black"
+        stroke-width="10"
+        stroke-linejoin="round"
+        d="
+        M -30 20
+        A 50 50 0 1 1 30 20
+        Q 20 30 20 50
+        L -20 50
+        Q -20 30 -31 19
+      "
+      />
+      <path
+        fill="none"
+        stroke="black"
+        stroke-width="10"
+        stroke-linecap="round"
+        d="M -30 -20 A 30 30 0 0 1 0 -50"
+      />
+      <path
+        stroke="black"
+        stroke-width="10"
+        stroke-linecap="round"
+        d="M -18 62 L 18 62 M -15 75 L 15 75"
+      />
+    </svg>
+    <!-- NOTE: script needs to be after element declared, otherwise we need an onload event for the window -->
+    <script>
+      const bulb = document.getElementById("bulb");
+      let lightOn = true;
+
+      bulb.addEventListener("click", () => {
+        console.log("Inside event listener");
+        bulb.setAttribute("fill", lightOn ? "transparent" : "gold");
+        lightOn = !lightOn;
+      });
+    </script>
+  </body>
+</html>
+
+<!-- react version
+
+import { useState } from "react";
+
+export const Lightbulb = () => {
+  const [lightOn, setLightOn] = useState(false);
+
+  const toggleLight = () => {
+    setLightOn(!lightOn);
+  };
+
+  return (
+    <svg width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        d="
+            M -30 20
+            A 50 50 0 1 1 30 20
+            Q 20 30 20 50
+            L -20 50
+            Q -20 30 -30 20"
+        fill={lightOn ? "gold" : "transparent"}
+        stroke="black"
+        strokeWidth="10"
+        strokeLinejoin="round"
+        onClick={toggleLight}
+      />
+      <path
+        d="
+            M -30 -20
+            A 30 30 0 0 1 0 -50"
+        fill="none"
+        stroke="black"
+        strokeWidth="10"
+        strokeLinecap="round"
+      />
+      <path
+        d="
+            M -18 62
+            L 18 62
+            M -15 75
+            L 15 75"
+        stroke="black"
+        strokeWidth="10"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
+-->

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>adjustable lamp</title>
+    <style>
+      svg {
+        display: block;
+        border: 1px solid black;
+      }
+      .arm {
+        stroke: black;
+        stroke-width: 7;
+        stroke-linecap: round;
+      }
+      #head {
+        cursor: grab;
+      }
+    </style>
+    <!-- <script>
+      setInterval(() => {
+        window.location.reload();
+      }, 5000);
+    </script> -->
+  </head>
+  <body>
+    <h1>bendy lamp</h1>
+    <svg width="200" height="200">
+      <g transform="translate(70, 170)">
+        <g id="arm1" transform="rotate(-25)">
+          <!-- 1st arm -->
+          <path d="M 0 0 L 0 -70" class="arm" />
+          <circle r="5" />
+
+          <g transform="translate(0, -70)">
+            <g id="arm2" transform="rotate(50)">
+              <!-- 2nd arm -->
+              <path d="M 0 0 L 0 -70" class="arm" />
+              <circle r="5" />
+
+              <g transform="translate(0, -70)">
+                <g id="arm3" transform="rotate(45)">
+                  <!-- 3rd arm -->
+                  <path d="M 0 0 L 0 -30" class="arm" />
+                  <circle r="5" />
+
+                  <g transform="translate(0, -30)">
+                    <g id="head" transform="rotate(-90)">
+                      <!-- Head -->
+                      <path
+                        d="M -30 30 Q 0 -20 30 30 Q 0 35 -30 30"
+                        fill="gray"
+                      />
+                      <circle cx="0" cy="25" r="10" fill="gold" />
+                      <path d="M -30 30 Q 0 -20 30 30 Q 0 25 -30 30" />
+                      <rect x="-10" y="-10" width="20" height="30" rx="5" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <!-- Base -->
+      <ellipse cx="100" cy="175" rx="30" ry="5" />
+      <ellipse cx="100" cy="170" rx="30" ry="5" fill="gray" />
+    </svg>
+    <script>
+      const head = document.getElementById("head");
+      const arm1 = document.getElementById("arm1");
+      const arm2 = document.getElementById("arm2");
+      const arm3 = document.getElementById("arm3");
+
+      let arm1Rotation = -25;
+      let arm3Rotation = 45;
+
+      let newArm1Rotation = arm1Rotation;
+      let newArm3Rotation = arm3Rotation;
+
+      let isDragging = false;
+      let dragStartX, dragStartY;
+
+      head.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
+      });
+
+      document.addEventListener("mouseup", () => {
+        isDragging = false;
+
+        arm3Rotation = newArm3Rotation;
+        arm1Rotation = newArm1Rotation;
+      });
+
+      document.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+
+        const dx = e.clientX - dragStartX;
+        const dy = e.clientY - dragStartY;
+
+        newArm1Rotation = Math.max(-60, Math.min(0, arm1Rotation - dy * 0.5));
+        newArm3Rotation = Math.max(-90, Math.min(90, arm3Rotation - dx * 0.8));
+
+        arm1.setAttribute("transform", `rotate(${newArm1Rotation})`);
+        arm2.setAttribute("transform", `rotate(${-newArm1Rotation * 2})`);
+        arm3.setAttribute("transform", `rotate(${newArm3Rotation})`);
+      });
+    </script>
+  </body>
+</html>
